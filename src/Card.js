@@ -7,9 +7,13 @@ const HIDDEN_SYMBOL = '❓'
 // eslint-disable-next-line no-template-curly-in-string
 const Card = ({
         card,
-        feedback
+        feedback,
+        onClick
     }) => ( < div className = {
             `card ${feedback}`
+        }
+        onClick = {
+            () => onClick(card)
         } >
 
         <

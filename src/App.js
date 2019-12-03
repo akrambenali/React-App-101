@@ -6,26 +6,35 @@ import React, {
 import './App.css'
 
 class App extends Component {
+    handleCardClick(card) {
+        console.log(card, 'clicked')
+    }
     render() {
         return ( < div className = "memory" >
             <
             GuessCount guesses = { 0 }
-            />  <Card card="😀" feedback="hidden" / >
+            />  <Card card="😀" feedback="hidden" onClick={this.handleCardClick}/ >
             <
             Card card = "🎉"
-            feedback = "justMatched" / >
-            <
+            feedback = "justMatched"
+            onClick = { this.handleCardClick }
+            / > <
             Card card = "💖"
-            feedback = "justMismatched" / >
-            <
+            feedback = "justMismatched"
+            onClick = { this.handleCardClick }
+            / > <
             Card card = "🎩"
-            feedback = "visible" / >
-            <
+            feedback = "visible"
+            onClick = { this.handleCardClick }
+            / > <
             Card card = "🐶"
-            feedback = "hidden" / >
-            <
+            feedback = "hidden"
+            onClick = { this.handleCardClick }
+            / > <
             Card card = "🐱"
-            feedback = "justMatched" / >
+            feedback = "justMatched"
+            onClick = { this.handleCardClick }
+            / >
 
             <
             /div>)
